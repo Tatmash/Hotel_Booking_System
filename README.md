@@ -1,14 +1,45 @@
 # Hotel_Booking_System
 
-In this coursework we have developed an extensible object-oriented data structure
-for managing bookings for hotels, restaurants, and rickshaw taxis. 
-Part of the code, the inheritance hierarchy, the class Booking, the class 
-Coursework2Main and the class HasFixedPrice were already given.
-My task was to complete the rest of the classes so that they implement the desired
-functionalities using suitable object-oriented concepts and information hiding. 
-This includes adding attributes, constructors, and (abstract or concrete) methods 
-to the provided classes. I was required to carry this out without modifying the 
-initially given complete clases. 
+#### What is this project about?
 
-Functionality described in documantation.
-This is an IntelliJ project. JDK 11.04 was used.
+This repository contains a course work assignment that I completed in 2019.
+This project is about contributing to the developement of an extensible object-oriented data structure
+for managing bookings for hotels, restaurants, and rickshaw taxis. 
+
+## What was given?
+
+Here part of the code, including an inheritance hierarchy below, is already given.
+![hotel_inheritance_hierarchy](https://user-images.githubusercontent.com/38473664/122656981-50081900-d157-11eb-87ec-d2a1c0cb7ecb.png)
+
+The classes that I was not allowed to modify at all that is, the code that I wrote in the other classes should work
+with the original classes:
+
+##### public abstract class Booking  
+The abstract class Booking provides the basis of our inheritance hierarchy. Every object of
+class Booking (and hence its subclasses) stores information about the name for which the 2
+booking was made and the point in time for which the booking was made. We can query a
+booking for this information. Moreover, we can query a booking for the number of persons
+for whom the booking was made.  
+##### public interface HasFixedPrice  
+Classes implementing this interface provide methods that returns a fixed price as an int
+in pence or as a formatted string. This interface also provides convenience functionality to
+generate a string representation from an amount of money given in pence.  
+##### public class Coursework2Main  
+This class makes use
+of some of the desired functionalities of our data structure in its main method.  
+
+## What was my task?
+
+I was required to implement the following classes:  
+
+public class RickshawBooking extends Booking  
+public class HotelBooking extends LocationBooking implements HasFixedPrice  
+public class RestaurantBooking extends LocationBooking  
+public class FixedPriceRestaurantBooking extends LocationBooking implements HasFixedPrice  
+
+
+
+
+
+
+
